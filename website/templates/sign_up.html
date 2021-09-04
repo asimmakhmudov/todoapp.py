@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+    * {
+        font-family: 'Patrick Hand', cursive;
+        font-size: 20px;
+    }
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        height: 80%;
+        width: 100%;
+    }
+
+    .headersign {
+        font-weight: 900;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+</style>
+<form method="POST">
+    <div class="content">
+        <h3 align="center" class="headersign">Sign Up</h3>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        </div>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
+        </div>
+        <div class="mb-3">
+            <label for="password1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password">
+        </div>
+        <div class="mb-3">
+            <label for="password2" class="form-label">Password (Confirm)</label>
+            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
